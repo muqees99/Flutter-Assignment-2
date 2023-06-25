@@ -8,9 +8,10 @@ void main() {
     'Osama'
   ];
   List<String> noDuplicate = [];
-  containDuplicate.forEach((element) {
-    if (noDuplicate.contains(element)) {
-      print('duplicates in list : $element');
+  for (String element in containDuplicate) {
+    if (!noDuplicate.contains(element)) {
+      noDuplicate.add(element);
     }
-  });
+  }
+  print(noDuplicate);
 }
